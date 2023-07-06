@@ -1,0 +1,12 @@
+---
+# tasks file for redis
+- name: Ensure Redis is present
+  yum:
+    name: redis
+    state: latest
+
+- name: Enable and start Redis server
+  service:
+    name: redis
+    state: started
+    enabled: true
